@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="src/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Importando a fonte usada no site -->
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+    <title>Azrael Commision</title>
+</head>
+<body>
+    <div id="sheet">
+        <header>
+            <img src="src/Azrael_Icone.png" alt="Icone circular com uma tag em volta do nome do autor 'Azrael'">
+            <h1>FORMULÁRIO PARA COMISSION</h1>
+        </header>
+        <form action="">
+            <section>
+                <h2>SOBRE VOCÊ</h2>
+                <fieldset>
+                    <div class="elemento">
+                        <label for="nome">NOME</label>
+                        <input type="text" name="nome" id="nome">
+                    </div>
+                    <div class="elemento">
+                        <label for="sobrenome">SOBRENOME</label>
+                        <input type="text" name="sobrenome" id="sobrenome">
+                    </div>
+                </fieldset>
+                <div class="elemento">
+                    <label for="elemento">EMAIL</label>
+                    <input type="email" name="email" id="email">
+                </div>
+                <div class="elemento">
+                    <label for="telefone">TELEFONE</label>
+                    <input type="tel" name="telefone" id="telefone" placeholder="(67) 90000-0000">
+                </div>
+                <section>
+                    <h2>SOBRE A ARTE</h2>
+                    <fieldset>
+                        <h4>Conceito</h4>
+                        <input type="checkbox" name="retrato" id="retrato"> <label for="retrato">Retrato</label>
+                        <input type="checkbox" name="busto" id="busto"> <label for="busto">Busto</label>
+                        <input type="checkbox" name="cenario" id="cenario"> <label for="cenario">Cenário</label>
+                        <input type="checkbox" name="gore" id="gore"> <label for="gore">Gore</label>
+                        <input type="checkbox" name="nsfw" id="nsfw"> <label for="nsfw">NSFW</label>
+                    </fieldset>
+                    <fieldset>
+                        <h4>Renderização</h4>
+                        <input type="radio" name="completamente renderizado" id="renderizado"> <label for="renderizado">Completamente Renderizado</label>
+                        <input type= "radio" name="flat color" id="flatColor"> <label for="flatColor">Flat Color</label>
+                        <input type="radio" name="black % white" id="bew"> <label for="bew">Black & White</label>
+                    </fieldset>
+                    <h4>Descrição</h4>
+                    <textarea name="descricao" id="descricao" cols="30" rows="20" placeholder="Escreva aqui"></textarea>
+                    <p>
+                        Descreva no campo acima detalhes que você deseja na sua arte. Tente ser o mais detalhista possível, desde elementos a mais na arte até cores predominante. Além disso inclua também data limite, caso haja, para qual fim (redes sociais, impressão, comercial), dedicatórias e etc.
+                    </p>
+                    <h4>Referências</h4>
+                    <input type="file" name="referencias" id="referencias">
+                    <p>
+                        Inisira acima imagens que sirvam como referência para a sua arte.
+                    </p>
+                <section>
+            </section>
+            <button type="submit" onsubmit="">Enviar</button>
+        </form>
+        <footer>
+            <img src="src/Azrael_Icone.png" alt="Icone circular com uma tag em volta do nome do autor 'Azrael'">
+            <h5>ME SIGA!</h5>
+            <img src="src/Instagram_Icone.png" alt="Ícone do Instagram">
+            <img src="src/Twitter_Icone.png" alt="Ícone do Twitter">
+            <img src="src/Github_Icone.png" alt="íÍcone do GitHub">
+        </footer>
+    </div>
+</body>
+</html>
