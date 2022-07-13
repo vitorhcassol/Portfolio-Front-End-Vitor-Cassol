@@ -19,65 +19,104 @@
         <header>
             <img src="src/Azrael_Icone.png" alt="Icone circular com uma tag em volta do nome do autor 'Azrael'">
             <h1>FORMULÁRIO PARA COMISSION</h1>
+            <img src="src/line.png" alt="linha divisória">
         </header>
         <form action="">
             <section>
-                <h2>SOBRE VOCÊ</h2>
+                <h3>SOBRE VOCÊ</h3>
                 <fieldset>
                     <div class="elemento">
-                        <label for="nome">NOME</label>
+                        <label for="nome">NOME*</label>
                         <input type="text" name="nome" id="nome">
                     </div>
                     <div class="elemento">
-                        <label for="sobrenome">SOBRENOME</label>
+                        <label for="sobrenome">SOBRENOME*</label>
                         <input type="text" name="sobrenome" id="sobrenome">
                     </div>
                 </fieldset>
                 <div class="elemento">
-                    <label for="elemento">EMAIL</label>
+                    <label for="elemento">EMAIL*</label>
                     <input type="email" name="email" id="email">
                 </div>
                 <div class="elemento">
                     <label for="telefone">TELEFONE</label>
-                    <input type="tel" name="telefone" id="telefone" placeholder="(67) 90000-0000">
+                    <input type="tel" name="telefone" id="telefone" placeholder="   (67) 90000-0000">
+                </div>
+                <div class="wrap">
+                    <img src="src/line.png" alt="linha divisória">
                 </div>
                 <section>
-                    <h2>SOBRE A ARTE</h2>
+                    <h3>SOBRE A ARTE</h3>
                     <fieldset>
-                        <h4>Conceito</h4>
-                        <input type="checkbox" name="retrato" id="retrato"> <label for="retrato">Retrato</label>
-                        <input type="checkbox" name="busto" id="busto"> <label for="busto">Busto</label>
-                        <input type="checkbox" name="cenario" id="cenario"> <label for="cenario">Cenário</label>
-                        <input type="checkbox" name="gore" id="gore"> <label for="gore">Gore</label>
-                        <input type="checkbox" name="nsfw" id="nsfw"> <label for="nsfw">NSFW</label>
+                        <div class="container">
+                            <h4>Conceito</h4>
+                            <div class="opcao">
+                                <input type="checkbox" name="retrato" id="retrato"> <label for="retrato">Retrato</label>
+                            </div>
+                            <div class="opcao">
+                                <input type="checkbox" name="busto" id="busto"> <label for="busto">Busto</label>
+                            </div>
+                            <div class="opcao">
+                                <input type="checkbox" name="cenario" id="cenario"> <label for="cenario">Cenário</label>
+                            </div>
+                            <div class="opcao">
+                                <input type="checkbox" name="gore" id="gore"> <label for="gore">Gore</label>
+                            </div>
+                            <div class="opcao">
+                                <input type="checkbox" name="nsfw" id="nsfw"> <label for="nsfw">NSFW</label>
+                            </div>
+                        </div>
                     </fieldset>
                     <fieldset>
-                        <h4>Renderização</h4>
-                        <input type="radio" name="completamente renderizado" id="renderizado"> <label for="renderizado">Completamente Renderizado</label>
-                        <input type= "radio" name="flat color" id="flatColor"> <label for="flatColor">Flat Color</label>
-                        <input type="radio" name="black % white" id="bew"> <label for="bew">Black & White</label>
+                        <div class="container">
+                            <h4>Renderização</h4>
+                            <div class="opcao">
+                                <input type="radio" name="completamente renderizado" id="renderizado"> <label for="renderizado">Completamente Renderizado</label>
+                            </div>
+                            <div class="opcao">
+                                <input type= "radio" name="flat color" id="flatColor"> <label for="flatColor">Flat Color</label>
+                            </div>
+                            <div class="opcao">
+                                <input type="radio" name="black % white" id="bew"> <label for="bew">Black & White</label>
+                            </div>
+                        </div>
                     </fieldset>
-                    <h4>Descrição</h4>
-                    <textarea name="descricao" id="descricao" cols="30" rows="20" placeholder="Escreva aqui"></textarea>
-                    <p>
-                        Descreva no campo acima detalhes que você deseja na sua arte. Tente ser o mais detalhista possível, desde elementos a mais na arte até cores predominante. Além disso inclua também data limite, caso haja, para qual fim (redes sociais, impressão, comercial), dedicatórias e etc.
-                    </p>
-                    <h4>Referências</h4>
-                    <input type="file" name="referencias" id="referencias">
-                    <p>
-                        Inisira acima imagens que sirvam como referência para a sua arte.
-                    </p>
+                    <div class="container">
+                        <h4>Descrição</h4>
+                        <textarea name="descricao" id="descricao" cols="30" rows="20" placeholder=" Escreva aqui"></textarea>
+                        <p>
+                            Descreva no campo acima detalhes que você deseja na sua arte. Tente ser o mais detalhista possível, desde elementos a mais na arte até cores predominante. Além disso inclua também data limite, caso haja, para qual fim (redes sociais, impressão, comercial), dedicatórias e etc.
+                        </p>
+                    </div>
+                    <div class="container">
+                        <h4>Referências</h4>
+                        <input type="file" name="referencias" id="referencias">
+                        <p>
+                            Inisira acima imagens que sirvam como referência para a sua arte.
+                        </p>
+                    </div>
                 <section>
             </section>
-            <button type="submit" onsubmit="">Enviar</button>
+            <div class="centralizar">
+                <div id="botao">
+                    <button type="submit" onsubmit="">ENVIAR</button>
+                </div>
+            </div>
         </form>
-        <footer>
+    </div>
+    <footer>
+        <div class="centralizar">
             <img src="src/Azrael_Icone.png" alt="Icone circular com uma tag em volta do nome do autor 'Azrael'">
+        </div>
+        <div id="siga">
             <h5>ME SIGA!</h5>
+        </div>
+        <div id="sociais">
             <img src="src/Instagram_Icone.png" alt="Ícone do Instagram">
             <img src="src/Twitter_Icone.png" alt="Ícone do Twitter">
             <img src="src/Github_Icone.png" alt="íÍcone do GitHub">
-        </footer>
-    </div>
+        </div>
+    </footer>
+    <div id="fim"></div>
 </body>
 </html>
