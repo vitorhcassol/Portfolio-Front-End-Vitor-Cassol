@@ -1,6 +1,8 @@
 /* ========= GERAL ========== */
 
-*{
+*,
+*:before,
+*:after{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -134,6 +136,9 @@ div.wrap {
 /* =========== SOBRE A ARTE ========== */
 
 div.opcao {
+    display: grid;
+    grid-template-columns: 0.1rem auto;
+    gap: 0.05rem;
     margin-bottom: 2.5rem;
 }
 
@@ -167,6 +172,15 @@ div#botao button {
     background-color: var(--black);
     color: var(--blank);
 
+    box-shadow: 0rem 0.2rem var(--light-gray);
+}
+
+div#botao button:hover {
+    cursor: pointer;
+}
+
+div#botao button:active {
+    background-color: var(--dark-gray);
     box-shadow: 0rem 0.2rem var(--light-gray);
 }
 
