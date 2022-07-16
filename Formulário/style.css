@@ -25,15 +25,17 @@
     font-size: 62.5%; /* 1rem = 10px */
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'DM Sans';
     font-size: 1.6rem;
 
     background-color: var(--black);
-}
 
-html {
-    scroll-behavior: smooth;
+    padding: 0rem 0.7rem;
 }
 
 html,
@@ -50,7 +52,7 @@ div#sheet {
     margin: 0.8rem auto 5rem auto;
     padding: 0rem 2.5rem;
 
-    max-width: 59.6rem;
+    max-width: 76.8rem;
 
     background-color: var(--primary-color);
 
@@ -76,10 +78,6 @@ header {
     text-align: center;
 }
 
-/* ======== FORMULÁRIO ========== */
-
-
-
 /* ======== SOBRE VOCÊ ========== */
 
 #cliente label {
@@ -97,6 +95,8 @@ header {
 
     border: 0.1rem solid var(--black-stroke);
     border-radius: 0.3rem;
+
+    padding-left: 1rem;
 }
 
 #cliente img {
@@ -212,6 +212,8 @@ input[type="radio"]:focus{
 textarea {
     font-family: 'Times New Roman', Times, serif;
     padding: 1rem;
+
+    resize: none;
 }
 
 textarea:focus {
@@ -277,9 +279,6 @@ textarea:focus {
     background-color: #0d0d0d;
 }
 
-
-
-
 /* ======== FOOTER ========== */
 
 footer {
@@ -300,4 +299,53 @@ footer {
     
     width: 80%;
     max-width: 59.6rem;
+}
+
+/* ======== Responsivo ========== */
+
+@media (min-width: 768px) {
+    /* ==== GERAL =================================== */
+    /*reset*/
+    body {
+        overflow: auto;
+    }
+
+    div#sheet {
+        max-width: 102.4rem;
+    }
+
+    section#arte {
+        display: grid;
+        grid-template-areas: 
+        "col-a col-a"
+        "tamanho estilo"
+        "renderizacao referencia"
+        "descricao descricao"
+        ;
+    }
+
+    #head-arte {
+        grid-area: col-a;
+    }
+
+    #arte-tamanho {
+        grid-area: tamanho;
+    }
+
+    #arte-estilo {
+        grid-area: estilo;
+    }
+
+    #arte-renderizacao {
+        grid-area: renderizacao;
+    }
+
+    #arte-descricao {
+        grid-area: descricao;
+    }
+
+    #arte-referencia {
+
+        grid-area: referencia;
+    }
 }

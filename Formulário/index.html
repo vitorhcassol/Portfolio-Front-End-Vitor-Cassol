@@ -44,21 +44,21 @@
 
             <!-- SESSÃO SOBRE A ARTE -->
             <section id="arte">
-                <h3>SOBRE A ARTE</h3>
+                <h3 id="head-arte">SOBRE A ARTE</h3>
                 <!-- Fieldset com os input checkbox para a escolha dos elementos que terão na arte -->
-                <fieldset class="info">
-                    <h4>Tamanho</h4>
+                <fieldset class="info" id="arte-tamanho">
+                    <h4>Tamanho*</h4>
                         <label for="retrato" class="input-style">
-                            <input type="radio" name="frame" id="retrato">
+                            <input type="radio" name="tamanho" id="retrato">
                             Retrato
                         </label>
                         <label for="busto" class="input-style">
-                            <input type="radio" name="frame" id="busto">
+                            <input type="radio" name="Tamanho" id="busto">
                             Busto
                         </label>
                 </fieldset>
                 <!-- Fieldset com os checkbox para a escolha dos elementos e o estilo da arte -->
-                <fieldset class="info">
+                <fieldset class="info" id="arte-estilo">
                     <h4>Estilo</h4>
                     <label for="cenario" class="input-style">
                         <input type="checkbox" name="cenario" id="cenario">
@@ -73,24 +73,24 @@
                         NSFW
                     </label>
                 </fieldset>
-                <!-- Fieldset com os input radios da escolha da renderização -->
-                <fieldset class="info">
+                <!-- Fieldset com os inputs radio da escolha da renderização -->
+                <fieldset class="info" id="arte-renderizaçao">
                     <h4>Renderização*</h4>
                     <label for="renderizado" class="input-style">
-                        <input type="radio" name="answer" id="renderizado">
+                        <input type="radio" name="render" id="renderizado">
                         Completamente Renderizado
                     </label>
                     <label for="flatColor" class="input-style">
-                        <input type= "radio" name="answer" id="flatColor">
+                        <input type= "radio" name="render" id="flatColor">
                         Flat Color
                     </label>
                     <label for="bew" class="input-style">
-                        <input type="radio" name="answer" id="bew">
+                        <input type="radio" name="render" id="bew">
                         Black & White
                     </label>
                 </fieldset>
                 <!-- Descrição de como será a arte -->
-                <div class="info">
+                <div class="info" id="arte-descricao">
                     <h4>Descrição</h4>
                     <textarea name="descricao" id="descricao" cols="30" rows="20" placeholder=" Escreva aqui"></textarea>
                     <p>
@@ -98,7 +98,7 @@
                     </p>
                 </div>
                 <!-- Input das referências que podem auxiliar ao desenvolvimento da arte -->
-                <div class="info">
+                <div class="info" id="arte-referencia">
                     <h4>Referências</h4>
                     <input type="file" name="referencias" id="referencias" multiple="multiple">
                     <p>
