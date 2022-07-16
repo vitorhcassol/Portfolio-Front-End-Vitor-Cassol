@@ -12,119 +12,118 @@
     <!-- Importando a fonte usada no site -->
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
 
-    <title>Azrael Commision</title>
+    <title>Azrael Commission</title>
 </head>
 <body>
     <div id="sheet">
+        <!-- CABEÇALHO DO FORMULÁRIO -->
         <header>
             <img src="src/Azrael_Icone.png" alt="Icone circular com uma tag em volta do nome do autor 'Azrael'">
             <h1>FORMULÁRIO PARA COMISSION</h1>
             <img src="src/line.png" alt="linha divisória">
         </header>
+
+        <!-- Início do Formulário -->
         <form action="">
-            <section>
+
+            <!-- SESSÃO SOBRE QUEM ESTÁ CONTRATANDO A COMMISSION, OU SEJA, O CLIENTE-->
+            <section id="cliente">
                 <h3>SOBRE VOCÊ</h3>
                 <fieldset>
-                    <div class="elemento">
-                        <label for="nome">NOME*</label>
-                        <input type="text" name="nome" id="nome">
-                    </div>
-                    <div class="elemento">
-                        <label for="sobrenome">SOBRENOME*</label>
-                        <input type="text" name="sobrenome" id="sobrenome">
-                    </div>
+                    <label for="nome">NOME*</label>
+                    <input type="text" name="nome" id="nome">
+                    <label for="sobrenome">SOBRENOME*</label>
+                    <input type="text" name="sobrenome" id="sobrenome">
                 </fieldset>
-                <div class="elemento">
-                    <label for="elemento">EMAIL*</label>
-                    <input type="email" name="email" id="email">
-                </div>
-                <div class="elemento">
-                    <label for="telefone">TELEFONE</label>
-                    <input type="tel" name="telefone" id="telefone" placeholder="   (67) 90000-0000">
-                </div>
-                <div class="wrap">
-                    <img src="src/line.png" alt="linha divisória">
-                </div>
-                <section>
-                    <h3>SOBRE A ARTE</h3>
-                    <fieldset>
-                        <div class="container">
-                            <h4>Conceito</h4>
-                            <div class="opcao">
-                                <input type="checkbox" name="retrato" id="retrato">
-                                <label for="retrato">Retrato</label>
-                            </div>
-                            <div class="opcao">
-                                <input type="checkbox" name="busto" id="busto">
-                                <label for="busto">Busto</label>
-                            </div>
-                            <div class="opcao">
-                                <input type="checkbox" name="cenario" id="cenario">
-                                <label for="cenario">Cenário</label>
-                            </div>
-                            <div class="opcao">
-                                <input type="checkbox" name="gore" id="gore"> <label for="gore">Gore</label>
-                            </div>
-                            <div class="opcao">
-                                <input type="checkbox" name="nsfw" id="nsfw">
-                                <label for="nsfw">NSFW</label>
-                            </div>
-                        </div>
-                    </fieldset>
-                    <fieldset>
-                        <div class="container">
-                            <h4>Renderização*</h4>
-                            <div class="opcao">
-                                <input type="radio" name="answer" id="renderizado">
-                                <label for="renderizado">Completamente Renderizado</label>
-                            </div>
-                            <div class="opcao">
-                                <input type= "radio" name="answer" id="flatColor">
-                                <label for="flatColor">Flat Color</label>
-                            </div>
-                            <div class="opcao">
-                                <input type="radio" name="answer" id="bew">
-                                <label for="bew">Black & White</label>
-                            </div>
-                        </div>
-                    </fieldset>
-                    <div class="container">
-                        <h4>Descrição</h4>
-                        <textarea name="descricao" id="descricao" cols="30" rows="20" placeholder=" Escreva aqui"></textarea>
-                        <p>
-                            Descreva no campo acima detalhes que você deseja na sua arte. Tente ser o mais detalhista possível, desde elementos a mais na arte até cores predominante. Além disso inclua também data limite, caso haja, para qual fim (redes sociais, impressão, comercial), dedicatórias e etc.
-                        </p>
-                    </div>
-                    <div class="container">
-                        <h4>Referências</h4>
-                        <input type="file" name="referencias" id="referencias" multiple="multiple">
-                        <p>
-                            Inisira acima imagens que sirvam como referência para a sua arte.
-                        </p>
-                    </div>
-                <section>
+                <label for="email">EMAIL*</label>
+                <input type="email" name="email" id="email">
+                <label for="telefone">TELEFONE</label>
+                <input type="tel" name="telefone" id="telefone" placeholder="   (67) 90000-0000">
+                <img src="src/line.png" alt="linha divisória">
             </section>
-            <div class="centralizar">
-                <div id="botao">
-                    <button type="submit" onsubmit="">ENVIAR</button>
+
+            <!-- SESSÃO SOBRE A ARTE -->
+            <section id="arte">
+                <h3>SOBRE A ARTE</h3>
+                <!-- Fieldset com os input checkbox para a escolha dos elementos que terão na arte -->
+                <fieldset class="info">
+                    <h4>Tamanho</h4>
+                        <label for="retrato" class="input-style">
+                            <input type="radio" name="frame" id="retrato">
+                            Retrato
+                        </label>
+                        <label for="busto" class="input-style">
+                            <input type="radio" name="frame" id="busto">
+                            Busto
+                        </label>
+                </fieldset>
+                <!-- Fieldset com os checkbox para a escolha dos elementos e o estilo da arte -->
+                <fieldset class="info">
+                    <h4>Estilo</h4>
+                    <label for="cenario" class="input-style">
+                        <input type="checkbox" name="cenario" id="cenario">
+                        Cenário
+                    </label>
+                    <label for="gore" class="input-style">
+                        <input type="checkbox" name="gore" id="gore">
+                        Gore
+                    </label>
+                    <label for="nsfw" class="input-style">
+                        <input type="checkbox" name="nsfw" id="nsfw">
+                        NSFW
+                    </label>
+                </fieldset>
+                <!-- Fieldset com os input radios da escolha da renderização -->
+                <fieldset class="info">
+                    <h4>Renderização*</h4>
+                    <label for="renderizado" class="input-style">
+                        <input type="radio" name="answer" id="renderizado">
+                        Completamente Renderizado
+                    </label>
+                    <label for="flatColor" class="input-style">
+                        <input type= "radio" name="answer" id="flatColor">
+                        Flat Color
+                    </label>
+                    <label for="bew" class="input-style">
+                        <input type="radio" name="answer" id="bew">
+                        Black & White
+                    </label>
+                </fieldset>
+                <!-- Descrição de como será a arte -->
+                <div class="info">
+                    <h4>Descrição</h4>
+                    <textarea name="descricao" id="descricao" cols="30" rows="20" placeholder=" Escreva aqui"></textarea>
+                    <p>
+                        Descreva no campo acima detalhes que você deseja na sua arte. Tente ser o mais detalhista possível, desde elementos a mais na arte até cores predominante. Além disso inclua também data limite, caso haja, para qual fim (redes sociais, impressão, comercial), dedicatórias e etc.
+                    </p>
                 </div>
+                <!-- Input das referências que podem auxiliar ao desenvolvimento da arte -->
+                <div class="info">
+                    <h4>Referências</h4>
+                    <input type="file" name="referencias" id="referencias" multiple="multiple">
+                    <p>
+                        Inisira acima imagens que sirvam como referência para a sua arte.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Botão de envio do formulário -->
+            <div id="enviar">
+                <button type="submit" onsubmit="" id="botao">ENVIAR</button>
             </div>
         </form>
     </div>
+
+    <!--- Footer com algumas informações do artista -->
     <footer>
-        <div class="centralizar">
-            <img src="src/Azrael_Icone.png" alt="Icone circular com uma tag em volta do nome do autor 'Azrael'">
-        </div>
-        <div id="siga">
-            <h5>ME SIGA!</h5>
-        </div>
+        <img src="src/Azrael_Icone.png" alt="Icone circular com uma tag em volta do nome do autor 'Azrael'">
+        <h5>ME SIGA!</h5>
         <div id="sociais">
             <a href="" target="_blank"><img src="src/Instagram_Icone.png" alt="Ícone do Instagram"></a>
             <a href="" target="_blank"><img src="src/Twitter_Icone.png" alt="Ícone do Twitter"></a>
             <a href="" target="_blank"><img src="src/Github_Icone.png" alt="íÍcone do GitHub"></a>
         </div>
     </footer>
-    <div id="fim"></div>
 </body>
 
 <script src=""></script>

@@ -14,6 +14,7 @@
     --blank: #FDFDFD;
     --primary-color: #F2F2F2;
     --light-gray: #737373;
+    --medium-gray: #d3d3d3;
     --dark-gray: #404040;
     --black: #0d0d0d;
     --black-stroke: #0d0d0dcc;
@@ -45,171 +46,258 @@ fieldset {
     border: none;
 }
 
-form section h3 {
+div#sheet {
+    margin: 0.8rem auto 5rem auto;
+    padding: 0rem 2.5rem;
+
+    max-width: 59.6rem;
+
+    background-color: var(--primary-color);
+
+    border-radius: 0.5rem;
+}
+
+h3 {
     margin-bottom: 5rem;
 }
 
-form section h4 {
-    margin-bottom: 2.5rem;
-}
-
-div.container {
-    display: flex;
-    flex-direction: column;
-}
-
-.centralizar{
-    display: flex;
-    flex-direction: column;
-
-    align-items: center;
-    justify-content: center;
-}
-
-
-/* ========= SHEET ========= */
-
-div#sheet {
-    background-color: var(--primary-color);
-    border-radius: 0.5rem;
-
-    width: 96vw;
-    max-width: 76.8rem;
-
-    margin: 0.7rem auto;
-}
-
-/* ========== HEADER ==========*/
+/* ======== HEADER ========== */
 
 header {
     display: flex;
     flex-direction: column;
 
+    margin-bottom: 5rem;
+    padding-top: 2.5rem;
+
     align-items: center;
-}
+    gap: 2.5rem;
 
-header img {
-    margin: 2.5rem 0rem;
-}
-
-header h1 {
     text-align: center;
-    margin-bottom: 2.5rem;
 }
 
-header img:nth-child(3) {
-    margin-bottom: 5rem;
-}
+/* ======== FORMULÁRIO ========== */
 
-/* ========= SOBRE VOCÊ ======== */
 
-form section:nth-child(1){
-    margin: 0rem 2.5rem;
-}
 
-div.elemento {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 5rem;
-}
+/* ======== SOBRE VOCÊ ========== */
 
-div.elemento label{
-    font-weight: bold;
+#cliente label {
+    display: block;
     margin-bottom: 1rem;
 }
 
-div.elemento input {
+#cliente input {
+    margin-bottom: 5rem;
+
     background-color: var(--blank);
+    
+    width: 100%;
+    height: 3.4rem;
 
     border: 0.1rem solid var(--black-stroke);
     border-radius: 0.3rem;
-
-    height: 3.4rem;
 }
 
-div.wrap {
+#cliente img {
     display: flex;
-    justify-content: center;
+    margin: auto;
     margin-bottom: 5rem;
 }
 
-/* =========== SOBRE A ARTE ========== */
+/* ======== SOBRE A ARTE ========== */
 
-div.opcao {
-    display: grid;
-    grid-template-columns: 0.1rem auto;
-    gap: 0.05rem;
+.info{
+    display: flex;
+    flex-direction: column;
+
     margin-bottom: 2.5rem;
 }
 
-div.opcao label{
-    margin-left: 2.2rem;
+.info h4 {
+    margin-bottom: 2.5rem;
 }
 
-div.container textarea {
-    border: 0.1rem solid var(--black-stroke);
-    border-radius: 0.3rem;
-}
-
-div.container p {
-    margin-top: 0.5rem;
+div.info:nth-last-child(1) {
     margin-bottom: 5rem;
-    font-size: 1.4rem;
 }
 
-div#botao {
+.input-style {
+    display: grid;
+    grid-template-columns: 1em auto;
+    gap: 2rem;
+
+    margin-bottom: 2.5rem;
+}
+
+input[type="checkbox"] {
+    appearance: none;
+    background-color: var(--blank);
+
+    font: inherit;
+    color: var(--black);
+
+    width: 2rem;
+    height: 2rem;
+
+    border: 0.2rem solid var(--dark-gray);
+    border-radius: 0.3rem;
+
+    display: grid;
+    place-content: center;
+}
+
+input[type="checkbox"]::before {
+    content: "";
+    width: 1.4rem;
+    height: 1.4rem;
+
+    background-color: var(--dark-gray);
+    border-radius: 0.3rem;
+
+    transform-origin: bottom left;
+    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+}
+
+input[type="checkbox"]:checked::before {
+    transform: scale(1);
+}
+
+input[type="checkbox"]:focus {
+    outline: 0.3rem solid var(--medium-gray);
+}
+
+input[type="radio"] {
+    appearance: none;
+    background-color: var(--blank);
+
+    font: inherit;
+    color: var(--blank);
+
+    width: 2rem;
+    height: 2rem;
+
+    border: 0.2rem solid var(--dark-gray);
+    border-radius: 50%;
+
+    display: grid;
+    place-content: center;
+}
+
+input[type="radio"]::before {
+    content: "";
+    width: 1rem;
+    height: 1rem;
+
+    background-color: var(--dark-gray);
+    border-radius: 50%;
+
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+
+    transform-origin: center;
+}
+
+input[type="radio"]:checked::before{
+    transform: scale(1);
+}
+
+input[type="radio"]:focus{
+    outline: var(--medium-gray) solid 0.3rem;
+}
+
+textarea {
+    font-family: 'Times New Roman', Times, serif;
+    padding: 1rem;
+}
+
+textarea:focus {
+    outline: var(--medium-gray);
+}
+
+#enviar {
+    display: flex;
+    justify-content: center;
+}
+
+
+#botao {
     display: inline-block;
-    margin: 2.5rem auto 7.5rem auto;
-}
+    margin-bottom: 5rem;
+    position: relative;
 
-div#botao button {
     width: 15rem;
     height: 3.9rem;
 
-    border: none;
+    color: var(--blank);
+    background-color: var(--black);
+
+    border: 0.2rem solid var(--black);
     border-radius: 0.8rem;
 
-    background-color: var(--black);
-    color: var(--blank);
-
-    box-shadow: 0rem 0.2rem var(--light-gray);
+    z-index: 1;
+    overflow: hidden;
 }
 
-div#botao button:hover {
+#botao:hover {
     cursor: pointer;
+    color: var(--black);
+
+    border: 0.2rem solid var(--black);
 }
 
-div#botao button:active {
-    background-color: var(--dark-gray);
-    box-shadow: 0rem 0.2rem var(--light-gray);
+#botao::after {
+    content: "";
+    background: var(--blank);
+
+    position: absolute;
+    z-index: -1;
+    padding: 0.85rem 0rem;
+    display: block;
+    transition: all 0.35s;
+
+    left: 0;
+    right: 0;
+    top: 100%;
+    bottom: -100%;
 }
 
-/* =========== FOOTER ========== */
-
-div.centralizar img:nth-child(1) {
-    margin-bottom: 5rem;
-    margin-top: 5rem;
+#botao:hover::after {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transition: all 0.35s;
 }
 
-#siga {
+#botao:active {
+    background-color: #0d0d0d;
+}
+
+
+
+
+/* ======== FOOTER ========== */
+
+footer {
     color: var(--blank);
-    display: flex;
-    justify-content: center;
 
-    margin-bottom: 2.5rem;
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 5rem;
 }
 
 #sociais {
     display: flex;
-    max-width: 35rem;
-
-    margin-left: auto;
-    margin-right: auto;
 
     justify-content: space-between;
-}
-
-#fim {
-    display: inline-block;
-    margin-bottom: 5rem;
+    
+    width: 80%;
+    max-width: 59.6rem;
 }
