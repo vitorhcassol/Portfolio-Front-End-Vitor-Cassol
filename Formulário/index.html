@@ -24,19 +24,19 @@
         </header>
 
         <!-- Início do Formulário -->
-        <form action="">
+        <form>
 
             <!-- SESSÃO SOBRE QUEM ESTÁ CONTRATANDO A COMMISSION, OU SEJA, O CLIENTE-->
             <section id="cliente">
                 <h3>SOBRE VOCÊ</h3>
                 <fieldset>
                     <label for="nome">NOME*</label>
-                    <input type="text" name="nome" id="nome">
+                    <input type="text" name="nome" id="nome" required>
                     <label for="sobrenome">SOBRENOME*</label>
-                    <input type="text" name="sobrenome" id="sobrenome">
+                    <input type="text" name="sobrenome" id="sobrenome" required>
                 </fieldset>
                 <label for="email">EMAIL*</label>
-                <input type="email" name="email" id="email">
+                <input type="email" name="email" id="email" required>
                 <label for="telefone">TELEFONE</label>
                 <input type="tel" name="telefone" id="telefone" placeholder="   (67) 90000-0000">
                 <img src="src/line.png" alt="linha divisória">
@@ -106,12 +106,12 @@
                     </p>
                 </div>
             </section>
-        </form>
 
-        <!-- Botão de envio do formulário -->
-        <div id="enviar">
-            <button id="botao" type="submit">ENVIAR</button>
-        </div>
+            <!-- Botão de envio do formulário -->
+            <div id="enviar">
+                <button id="botao" type="submit">ENVIAR</button>
+            </div>
+        </form>
     </div>
 
     <!--- Footer com algumas informações do artista -->
